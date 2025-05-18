@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml:2:13-83
-INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml:2:13-83
+ADDED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml:2:13-83
+INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml:2:13-83
 	package
-		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml
+		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml
 	xmlns:android
-		ADDED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml:2:23-81
+		ADDED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml:2:23-81
 uses-sdk
-INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml reason: use-sdk injection requested
-INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml
-INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml
+INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml reason: use-sdk injection requested
+INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml
+INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml
 	android:targetSdkVersion
-		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml
+		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml
 	android:minSdkVersion
-		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest17621039414193410772.xml
+		INJECTED from I:\INVESPROJECT\shared\build\intermediates\tmp\ProcessLibraryManifest\release\tempAndroidManifest6837621479934862230.xml

@@ -33,6 +33,9 @@ kotlin {
                 // Serialization
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
+                // Date/Time
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
+
                 // Firebase (Multiplatform)
                 implementation("dev.gitlive:firebase-auth:1.8.1")
                 implementation("dev.gitlive:firebase-firestore:1.8.1")

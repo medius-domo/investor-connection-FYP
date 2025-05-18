@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.0" type="incidents">
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:androidApp*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="5"
+            endColumn="17"
+            endOffset="271"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `capitalize(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with `capitalize(Locale.ROOT)`"
+                family="Use explicit locale"
+                replacement="capitalize(java.util.Locale.ROOT)"
+                shortenNames="true">
+                <range
+                    file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/auth/SignUpScreen.kt"
+                    startOffset="3870"
+                    endOffset="3882"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with `capitalize(Locale.getDefault())`"
+                family="Use explicit locale"
+                replacement="capitalize(java.util.Locale.getDefault())"
+                shortenNames="true">
+                <range
+                    file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/auth/SignUpScreen.kt"
+                    startOffset="3870"
+                    endOffset="3882"/>
+            </fix-replace>
+        </fix-alternatives>
+        <location
+            file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/auth/SignUpScreen.kt"
+            line="116"
+            column="62"
+            startOffset="3870"
+            endLine="116"
+            endColumn="72"
+            endOffset="3880"/>
+    </incident>
+
+    <incident
+        id="AutoboxingStateCreation"
+        severity="informational"
+        message="Prefer `mutableIntStateOf` instead of `mutableStateOf`">
+        <fix-composite
+            description="Replace with mutableIntStateOf">
+            <fix-replace
+                description="Replace with androidx.compose.runtime.mutableIntStateOf"
+                replacement="androidx.compose.runtime.mutableIntStateOf"
+                shortenNames="true">
+                <range
+                    file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/home/HomeScreen.kt"
+                    startOffset="1133"
+                    endOffset="1147"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/home/HomeScreen.kt"
+            line="28"
+            column="35"
+            startOffset="1133"
+            endLine="28"
+            endColumn="49"
+            endOffset="1147"/>
+    </incident>
+
+    <incident
+        id="DefaultLocale"
+        severity="warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `capitalize(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with `capitalize(Locale.ROOT)`"
+                family="Use explicit locale"
+                replacement="capitalize(java.util.Locale.ROOT)"
+                shortenNames="true">
+                <range
+                    file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/home/ProfileScreen.kt"
+                    startOffset="2846"
+                    endOffset="2858"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with `capitalize(Locale.getDefault())`"
+                family="Use explicit locale"
+                replacement="capitalize(java.util.Locale.getDefault())"
+                shortenNames="true">
+                <range
+                    file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/home/ProfileScreen.kt"
+                    startOffset="2846"
+                    endOffset="2858"/>
+            </fix-replace>
+        </fix-alternatives>
+        <location
+            file="${:androidApp*debug*sourceProvider*0*javaDir*2}/com/invesproject/android/ui/screens/home/ProfileScreen.kt"
+            line="80"
+            column="75"
+            startOffset="2846"
+            endLine="80"
+            endColumn="85"
+            endOffset="2856"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-compose than 1.8.1 is available: 1.10.1">
+        <fix-replace
+            description="Change to 1.10.1"
+            family="Update versions"
+            oldString="1.8.1"
+            replacement="1.10.1"/>
+        <location
+            file="${:androidApp*projectDir}/build.gradle.kts"
+            line="76"
+            column="21"
+            startOffset="2102"
+            endLine="76"
+            endColumn="61"
+            endOffset="2142"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.6.2 is available: 2.9.0">
+        <fix-replace
+            description="Change to 2.9.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.9.0"/>
+        <location
+            file="${:androidApp*projectDir}/build.gradle.kts"
+            line="77"
+            column="21"
+            startOffset="2165"
+            endLine="77"
+            endColumn="67"
+            endOffset="2211"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.6.2 is available: 2.9.0">
+        <fix-replace
+            description="Change to 2.9.0"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.9.0"/>
+        <location
+            file="${:androidApp*projectDir}/build.gradle.kts"
+            line="78"
+            column="21"
+            startOffset="2234"
+            endLine="78"
+            endColumn="73"
+            endOffset="2286"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.5 is available: 2.9.0">
+        <fix-replace
+            description="Change to 2.9.0"
+            family="Update versions"
+            oldString="2.7.5"
+            replacement="2.9.0"/>
+        <location
+            file="${:androidApp*projectDir}/build.gradle.kts"
+            line="79"
+            column="21"
+            startOffset="2309"
+            endLine="79"
+            endColumn="65"
+            endOffset="2353"/>
+    </incident>
+
+</incidents>

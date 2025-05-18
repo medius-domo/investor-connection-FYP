@@ -1,15 +1,17 @@
 package firebase
 
+import kotlin.js.json
+
 object FirebaseConfig {
-    val config = jsObject {
-        apiKey = "AIzaSyDASIcrW3PE2Cx3ucJ4F41Ufi11-JJKQfI"
-        authDomain = "invesproject-be46a.firebaseapp.com"
-        projectId = "invesproject-be46a"
-        storageBucket = "invesproject-be46a.firebasestorage.app"
-        messagingSenderId = "871785524032"
-        appId = "1:871785524032:web:3d39f309ecb743e83268a5"
-        measurementId = "G-TGM7Z7K2RJ"
-    }
+    val config = json(
+        "apiKey" to "AIzaSyDASIcrW3PE2Cx3ucJ4F41Ufi11-JJKQfI",
+        "authDomain" to "invesproject-be46a.firebaseapp.com",
+        "projectId" to "invesproject-be46a",
+        "storageBucket" to "invesproject-be46a.firebasestorage.app",
+        "messagingSenderId" to "871785524032",
+        "appId" to "1:871785524032:web:3d39f309ecb743e83268a5",
+        "measurementId" to "G-TGM7Z7K2RJ"
+    )
 }
 
 @JsModule("firebase/app")

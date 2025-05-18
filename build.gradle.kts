@@ -26,4 +26,9 @@ allprojects {
             jvmTarget = "17"
         }
     }
+}
+
+// Configure Node.js version
+rootProject.plugins.withType<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin> {
+    rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().nodeVersion = "18.20.5"
 } 

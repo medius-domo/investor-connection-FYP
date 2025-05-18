@@ -1,3 +1,4 @@
+import com.invesproject.web.ui.App
 import firebase.initializeFirebase
 import org.jetbrains.compose.web.renderComposable
 

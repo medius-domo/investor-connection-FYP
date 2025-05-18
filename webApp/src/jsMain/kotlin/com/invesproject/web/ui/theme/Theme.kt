@@ -23,45 +23,46 @@ object WebColors {
     val OnBackground = Color("#1C1B1F")
     val Surface = Color("#FEFEFE")
     val OnSurface = Color("#1C1B1F")
+    val OnSurfaceVariant = Color("#49454F")
 }
 
-object WebTypography {
-    val HeadlineLarge = StyleSheet.style {
+object WebTypography : StyleSheet() {
+    val HeadlineLarge by style {
         fontSize(32.px)
-        fontWeight("bold")
+        fontWeight(700)
         lineHeight("40px")
     }
 
-    val HeadlineMedium = StyleSheet.style {
+    val HeadlineMedium by style {
         fontSize(28.px)
-        fontWeight("bold")
+        fontWeight(700)
         lineHeight("36px")
     }
 
-    val TitleLarge = StyleSheet.style {
+    val TitleLarge by style {
         fontSize(22.px)
-        fontWeight("bold")
+        fontWeight(700)
         lineHeight("28px")
     }
 
-    val BodyLarge = StyleSheet.style {
+    val BodyLarge by style {
         fontSize(16.px)
         lineHeight("24px")
     }
 
-    val BodyMedium = StyleSheet.style {
+    val BodyMedium by style {
         fontSize(14.px)
         lineHeight("20px")
     }
 
-    val LabelLarge = StyleSheet.style {
+    val LabelLarge by style {
         fontSize(14.px)
-        fontWeight("500")
+        fontWeight(500)
         lineHeight("20px")
     }
 }
 
-object WebTheme : StyleSheet() {
+object InvesProjectTheme : StyleSheet() {
     init {
         "body" style {
             margin(0.px)
@@ -79,10 +80,10 @@ object WebTheme : StyleSheet() {
             padding(12.px, 24.px)
             cursor("pointer")
             fontSize(14.px)
-            fontWeight("500")
+            fontWeight(500)
             property("transition", "background-color 0.2s")
 
-            hover {
+            hover(self) style {
                 backgroundColor(WebColors.PrimaryContainer)
             }
         }
@@ -90,15 +91,45 @@ object WebTheme : StyleSheet() {
         "input" style {
             backgroundColor(WebColors.Surface)
             color(WebColors.OnSurface)
-            border(1.px, LineStyle.Solid, WebColors.OnSurface)
+            border {
+                width = 1.px
+                style = LineStyle.Solid
+                color = WebColors.OnSurface
+            }
             borderRadius(4.px)
             padding(12.px)
             fontSize(14.px)
             width(100.percent)
-            boxSizing("border-box")
+            property("box-sizing", "border-box")
 
-            focus {
-                borderColor(WebColors.Primary)
+            focus(self) style {
+                border {
+                    color = WebColors.Primary
+                }
+                outline("none")
+            }
+        }
+
+        "textarea" style {
+            backgroundColor(WebColors.Surface)
+            color(WebColors.OnSurface)
+            border {
+                width = 1.px
+                style = LineStyle.Solid
+                color = WebColors.OnSurface
+            }
+            borderRadius(4.px)
+            padding(12.px)
+            fontSize(14.px)
+            width(100.percent)
+            property("box-sizing", "border-box")
+            resize("vertical")
+            minHeight(100.px)
+
+            focus(self) style {
+                border {
+                    color = WebColors.Primary
+                }
                 outline("none")
             }
         }
