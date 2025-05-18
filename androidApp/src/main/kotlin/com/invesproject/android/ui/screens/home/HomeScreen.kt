@@ -2,7 +2,11 @@ package com.invesproject.android.ui.screens.home
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.ExitToApp
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.Message
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -53,7 +57,7 @@ fun HomeScreen(
                 NavigationBarItem(
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1 },
-                    icon = { Icon(Icons.Default.Message, contentDescription = "Messages") },
+                    icon = { Icon(Icons.Outlined.Message, contentDescription = "Messages") },
                     label = { Text("Messages") }
                 )
                 if (currentUser?.role == UserRole.INNOVATOR) {

@@ -63,6 +63,19 @@ class AuthViewModel(
         }
     }
 
+    fun updateUserProfile(user: User) {
+        scope.launch {
+            try {
+                _state.value = AuthState.Loading
+                val updatedUser = authRepository.updateUserProfile(user)
+                _currentUser.value = updatedUser
+                _state.value = AuthState.Success
+            } catch (e: Exception) {
+                _state.value = AuthState.Error(e.message ?: "Failed to update profile")
+            }
+        }
+    }
+
     private fun checkCurrentUser() {
         scope.launch {
             _currentUser.value = authRepository.getCurrentUser()

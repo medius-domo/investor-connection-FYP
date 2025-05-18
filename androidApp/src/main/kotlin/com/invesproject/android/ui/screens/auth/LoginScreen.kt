@@ -14,6 +14,7 @@ import com.invesproject.shared.ui.components.LoadingSpinner
 import com.invesproject.shared.ui.components.OutlinedInput
 import com.invesproject.shared.ui.components.PrimaryButton
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(
     authViewModel: AuthViewModel,

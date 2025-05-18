@@ -61,7 +61,8 @@ fun OutlinedInput(
     label: String,
     modifier: Modifier = Modifier,
     isError: Boolean = false,
-    errorMessage: String? = null
+    errorMessage: String? = null,
+    visualTransformation: androidx.compose.ui.text.input.VisualTransformation = androidx.compose.ui.text.input.VisualTransformation.None
 ) {
     Column {
         OutlinedTextField(
@@ -70,7 +71,8 @@ fun OutlinedInput(
             label = { Text(label) },
             modifier = modifier.fillMaxWidth(),
             isError = isError,
-            singleLine = true
+            singleLine = true,
+            visualTransformation = visualTransformation
         )
         if (isError && errorMessage != null) {
             Text(

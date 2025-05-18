@@ -50,6 +50,22 @@ class ProposalViewModel(
         }
     }
 
+    fun getAllProposals() {
+        scope.launch {
+            try {
+                _state.value = ProposalState.Loading
+                proposalRepository.getAllProposals()
+                    .catch { e -> _state.value = ProposalState.Error(e.message ?: "Failed to load proposals") }
+                    .collect { proposals ->
+                        _proposals.value = proposals
+                        _state.value = ProposalState.Success
+                    }
+            } catch (e: Exception) {
+                _state.value = ProposalState.Error(e.message ?: "Failed to load proposals")
+            }
+        }
+    }
+
     fun getProposalsBySector(sector: BusinessSector) {
         scope.launch {
             proposalRepository.getProposalsBySector(sector)
@@ -83,13 +99,7 @@ class ProposalViewModel(
     }
 
     private fun observeProposals() {
-        scope.launch {
-            proposalRepository.getAllProposals()
-                .catch { e -> _state.value = ProposalState.Error(e.message ?: "Failed to load proposals") }
-                .collect { proposals ->
-                    _proposals.value = proposals
-                }
-        }
+        getAllProposals()
     }
 }
 
