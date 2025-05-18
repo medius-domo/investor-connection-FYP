@@ -787,6 +787,7 @@ int id center_vertical 0x7f08004b
 int id checkbox 0x7f08004c
 int id checked 0x7f08004d
 int id chronometer 0x7f08004e
+int id coil_request_manager 0x7f0800ca
 int id collapseActionView 0x7f08004f
 int id compose_view_saveable_id_tag 0x7f080050
 int id consume_window_insets_tag 0x7f080051
@@ -1996,5 +1997,6 @@ int[] styleable ViewStubCompat { 0x010100d0, 0x010100f2, 0x010100f3 }
 int styleable ViewStubCompat_android_id 0
 int styleable ViewStubCompat_android_layout 1
 int styleable ViewStubCompat_android_inflatedId 2
+int xml file_paths 0x7f110002
 int xml ga_ad_services_config 0x7f110000
 int xml image_share_filepaths 0x7f110001

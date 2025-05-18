@@ -3,13 +3,15 @@ package com.invesproject.shared.presentation.viewmodel
 import com.invesproject.shared.domain.model.BusinessProposal
 import com.invesproject.shared.domain.model.BusinessSector
 import com.invesproject.shared.domain.repository.ProposalRepository
+import com.invesproject.shared.domain.repository.StorageRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class ProposalViewModel(
+open class ProposalViewModel(
     private val proposalRepository: ProposalRepository,
+    private val storageRepository: StorageRepository,
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.Main)
 ) {
     private val _state = MutableStateFlow<ProposalState>(ProposalState.Initial)
@@ -27,20 +29,17 @@ class ProposalViewModel(
         description: String,
         estimatedBudget: Double,
         sector: BusinessSector,
-        innovatorId: String,
-        businessPlanUrl: String? = null
+        innovatorId: String
     ) {
         scope.launch {
+            _state.value = ProposalState.Loading
             try {
-                _state.value = ProposalState.Loading
                 val proposal = BusinessProposal(
-                    id = "",
                     title = title,
                     description = description,
                     estimatedBudget = estimatedBudget,
                     sector = sector,
-                    innovatorId = innovatorId,
-                    businessPlanUrl = businessPlanUrl
+                    innovatorId = innovatorId
                 )
                 proposalRepository.createProposal(proposal)
                 _state.value = ProposalState.Success
@@ -50,39 +49,102 @@ class ProposalViewModel(
         }
     }
 
-    fun getAllProposals() {
+    fun createProposalWithFile(
+        title: String,
+        description: String,
+        estimatedBudget: Double,
+        sector: BusinessSector,
+        innovatorId: String,
+        fileBytes: ByteArray,
+        fileName: String
+    ) {
+        scope.launch {
+            _state.value = ProposalState.Loading
+            try {
+                // First create the proposal
+                val proposal = BusinessProposal(
+                    title = title,
+                    description = description,
+                    estimatedBudget = estimatedBudget,
+                    sector = sector,
+                    innovatorId = innovatorId
+                )
+                val createdProposal = proposalRepository.createProposal(proposal)
+
+                // Upload the business plan
+                val fileUrl = storageRepository.uploadBusinessPlan(
+                    proposalId = createdProposal.id,
+                    fileBytes = fileBytes,
+                    fileName = fileName
+                )
+
+                // Update the proposal with the file URL
+                val updatedProposal = createdProposal.copy(
+                    businessPlanUrl = fileUrl,
+                    businessPlanFileName = fileName
+                )
+                proposalRepository.updateProposal(updatedProposal)
+
+                _state.value = ProposalState.Success
+            } catch (e: Exception) {
+                _state.value = ProposalState.Error(e.message ?: "Failed to create proposal with file")
+            }
+        }
+    }
+
+    fun downloadBusinessPlan(proposal: BusinessProposal): Flow<ByteArray> = flow {
+        if (proposal.businessPlanUrl == null) {
+            throw IllegalStateException("No business plan available")
+        }
+        // Download logic will be implemented in platform-specific code
+        throw NotImplementedError("Download not implemented for this platform")
+    }
+
+    private fun observeProposals() {
         scope.launch {
             try {
-                _state.value = ProposalState.Loading
                 proposalRepository.getAllProposals()
-                    .catch { e -> _state.value = ProposalState.Error(e.message ?: "Failed to load proposals") }
-                    .collect { proposals ->
-                        _proposals.value = proposals
-                        _state.value = ProposalState.Success
+                    .catch { e -> 
+                        _state.value = ProposalState.Error(e.message ?: "Failed to load proposals")
+                    }
+                    .collect { proposalList ->
+                        _proposals.value = proposalList
                     }
             } catch (e: Exception) {
-                _state.value = ProposalState.Error(e.message ?: "Failed to load proposals")
+                _state.value = ProposalState.Error(e.message ?: "Failed to observe proposals")
             }
         }
     }
 
     fun getProposalsBySector(sector: BusinessSector) {
         scope.launch {
-            proposalRepository.getProposalsBySector(sector)
-                .catch { e -> _state.value = ProposalState.Error(e.message ?: "Failed to load proposals") }
-                .collect { proposals ->
-                    _proposals.value = proposals
-                }
+            try {
+                proposalRepository.getProposalsBySector(sector)
+                    .catch { e -> 
+                        _state.value = ProposalState.Error(e.message ?: "Failed to load proposals")
+                    }
+                    .collect { proposalList ->
+                        _proposals.value = proposalList
+                    }
+            } catch (e: Exception) {
+                _state.value = ProposalState.Error(e.message ?: "Failed to load proposals by sector")
+            }
         }
     }
 
     fun getProposalsByInnovator(innovatorId: String) {
         scope.launch {
-            proposalRepository.getProposalsByInnovator(innovatorId)
-                .catch { e -> _state.value = ProposalState.Error(e.message ?: "Failed to load proposals") }
-                .collect { proposals ->
-                    _proposals.value = proposals
-                }
+            try {
+                proposalRepository.getProposalsByInnovator(innovatorId)
+                    .catch { e -> 
+                        _state.value = ProposalState.Error(e.message ?: "Failed to load proposals")
+                    }
+                    .collect { proposalList ->
+                        _proposals.value = proposalList
+                    }
+            } catch (e: Exception) {
+                _state.value = ProposalState.Error(e.message ?: "Failed to load proposals by innovator")
+            }
         }
     }
 
@@ -96,10 +158,6 @@ class ProposalViewModel(
                 _state.value = ProposalState.Error(e.message ?: "Failed to mark interest")
             }
         }
-    }
-
-    private fun observeProposals() {
-        getAllProposals()
     }
 }
 

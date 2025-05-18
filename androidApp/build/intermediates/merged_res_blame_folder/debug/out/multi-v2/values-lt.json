@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.invesproject.android.androidApp-mergeDebugResources-61:/values-lt/values-lt.xml",
+            "outputFile": "com.invesproject.android.androidApp-mergeDebugResources-62:/values-lt/values-lt.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.8\\transforms\\f9debed6ae679ce2953e17c36b434ae7\\transformed\\ui-release\\res\\values-lt\\values-lt.xml",

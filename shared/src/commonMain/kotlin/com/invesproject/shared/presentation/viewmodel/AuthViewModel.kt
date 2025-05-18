@@ -3,6 +3,7 @@ package com.invesproject.shared.presentation.viewmodel
 import com.invesproject.shared.domain.model.User
 import com.invesproject.shared.domain.model.UserRole
 import com.invesproject.shared.domain.repository.AuthRepository
+import com.invesproject.shared.domain.repository.StorageRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -12,6 +13,7 @@ import kotlinx.coroutines.launch
 
 class AuthViewModel(
     private val authRepository: AuthRepository,
+    private val storageRepository: StorageRepository,
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.Main)
 ) {
     private val _state = MutableStateFlow<AuthState>(AuthState.Initial)
@@ -72,6 +74,35 @@ class AuthViewModel(
                 _state.value = AuthState.Success
             } catch (e: Exception) {
                 _state.value = AuthState.Error(e.message ?: "Failed to update profile")
+            }
+        }
+    }
+
+    fun updateProfilePicture(imageBytes: ByteArray) {
+        scope.launch {
+            _state.value = AuthState.Loading
+            try {
+                val currentUser = _currentUser.value ?: throw IllegalStateException("No user logged in")
+                
+                // Delete old profile picture if exists
+                currentUser.profilePictureUrl?.let { oldUrl ->
+                    try {
+                        storageRepository.deleteFile(oldUrl)
+                    } catch (e: Exception) {
+                        // Ignore deletion errors
+                    }
+                }
+                
+                // Upload new profile picture
+                val pictureUrl = storageRepository.uploadProfilePicture(currentUser.id, imageBytes)
+                
+                // Update user profile with new picture URL
+                val updatedUser = currentUser.copy(profilePictureUrl = pictureUrl)
+                updateUserProfile(updatedUser)
+                
+                _state.value = AuthState.Success
+            } catch (e: Exception) {
+                _state.value = AuthState.Error(e.message ?: "Failed to update profile picture")
             }
         }
     }

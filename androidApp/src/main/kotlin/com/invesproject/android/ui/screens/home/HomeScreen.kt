@@ -11,16 +11,16 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.invesproject.android.data.AndroidProposalViewModel
 import com.invesproject.shared.domain.model.UserRole
 import com.invesproject.shared.presentation.viewmodel.AuthViewModel
 import com.invesproject.shared.presentation.viewmodel.MessageViewModel
-import com.invesproject.shared.presentation.viewmodel.ProposalViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     authViewModel: AuthViewModel,
-    proposalViewModel: ProposalViewModel,
+    proposalViewModel: AndroidProposalViewModel,
     messageViewModel: MessageViewModel,
     onNavigateToLogin: () -> Unit
 ) {
@@ -95,12 +95,14 @@ fun HomeScreen(
                 2 -> if (currentUser?.role == UserRole.INNOVATOR) {
                     NewProposalScreen(
                         currentUser = currentUser,
-                        proposalViewModel = proposalViewModel
+                        proposalViewModel = proposalViewModel,
+                        onNavigateBack = { selectedTab = 0 }
                     )
                 }
                 3 -> ProfileScreen(
                     currentUser = currentUser,
-                    authViewModel = authViewModel
+                    authViewModel = authViewModel,
+                    onNavigateToLogin = onNavigateToLogin
                 )
             }
         }

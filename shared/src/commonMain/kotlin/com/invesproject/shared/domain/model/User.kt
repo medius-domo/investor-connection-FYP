@@ -9,6 +9,7 @@ data class User(
     val email: String = "",
     val name: String = "",
     val role: UserRole = UserRole.INNOVATOR,
+    val profilePictureUrl: String? = null,
     val createdAt: Long = Clock.System.now().toEpochMilliseconds()
 )
 

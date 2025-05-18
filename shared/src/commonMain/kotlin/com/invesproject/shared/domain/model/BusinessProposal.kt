@@ -12,6 +12,7 @@ data class BusinessProposal(
     val sector: BusinessSector = BusinessSector.TECHNOLOGY,
     val innovatorId: String = "",
     val businessPlanUrl: String? = null,
+    val businessPlanFileName: String? = null,
     val interestedInvestors: List<String> = emptyList(),
     val createdAt: Long = Clock.System.now().toEpochMilliseconds()
 )

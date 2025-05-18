@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.invesproject.android.androidApp-mergeDebugResources-61:/values-eu/values-eu.xml",
+            "outputFile": "com.invesproject.android.androidApp-mergeDebugResources-62:/values-eu/values-eu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\USER\\.gradle\\caches\\8.8\\transforms\\e4e4245e2edcba0f4682a5caffea14aa\\transformed\\play-services-base-18.0.1\\res\\values-eu\\values.xml",
