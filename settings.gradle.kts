@@ -1,15 +1,8 @@
-rootProject.name = "InvesProject"
-
-include(":androidApp")
-include(":webApp")
-include(":shared")
-
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        gradlePluginPortal()
     }
 }
 
@@ -19,4 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
-} 
+}
+
+rootProject.name = "InvesProject"
+include(":androidApp")
+include(":shared")
+include(":webApp") 

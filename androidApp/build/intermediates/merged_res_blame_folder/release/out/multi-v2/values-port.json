@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.invesproject.android.androidApp-mergeReleaseResources-55:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\USER\\.gradle\\caches\\8.8\\transforms\\d9c8de59f786767364b278603c63255e\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

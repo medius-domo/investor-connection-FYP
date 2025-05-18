@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <string name="app_name">InvesProject</string>
     <string name="gcm_defaultSenderId" translatable="false">871785524032</string>
     <string name="google_api_key" translatable="false">AIzaSyDACXw65aux01nMVKyg7GqR69N240Q3_oY</string>
     <string name="google_app_id" translatable="false">1:871785524032:android:d2cbc2a459068ecf3268a5</string>
