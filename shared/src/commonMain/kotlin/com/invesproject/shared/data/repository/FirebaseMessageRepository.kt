@@ -60,4 +60,4 @@ class FirebaseMessageRepository : MessageRepository {
     override suspend fun deleteMessage(messageId: String) {
         messagesCollection.document(messageId).delete()
     }
-} 
+}

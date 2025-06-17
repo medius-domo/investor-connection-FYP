@@ -1,0 +1,22 @@
+{
+  "name": "InvesProject",
+  "version": "unspecified",
+  "private": true,
+  "workspaces": [
+    "packages\\InvesProject-shared",
+    "packages\\InvesProject-shared-test",
+    "packages\\InvesProject-webApp",
+    "packages\\InvesProject-webApp-test",
+    "packages_imported\\skiko-js\\0.7.85",
+    "packages_imported\\Kotlin-DateTime-library-kotlinx-datetime-js-ir\\0.4.1",
+    "packages_imported\\firebase-kotlin-sdk-firebase-common-js-ir\\1.8.1",
+    "packages_imported\\html-core-js\\1.5.10",
+    "packages_imported\\kotlin-test-js-runner\\0.0.1"
+  ],
+  "resolutions": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

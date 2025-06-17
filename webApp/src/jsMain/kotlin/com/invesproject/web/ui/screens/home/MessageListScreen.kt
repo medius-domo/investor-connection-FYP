@@ -9,8 +9,7 @@ import com.invesproject.web.ui.theme.WebColors
 import com.invesproject.web.ui.theme.WebTypography
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
-import java.text.SimpleDateFormat
-import java.util.*
+import kotlinx.datetime.*
 
 @Composable
 fun MessageListScreen(
@@ -19,7 +18,6 @@ fun MessageListScreen(
 ) {
     val messages by messageViewModel.messages.collectAsState()
     val state by messageViewModel.state.collectAsState()
-    val dateFormat = remember { SimpleDateFormat("MMM dd, HH:mm", Locale.getDefault()) }
 
     LaunchedEffect(currentUser) {
         if (currentUser != null) {
@@ -34,7 +32,7 @@ fun MessageListScreen(
                 flexDirection(FlexDirection.Column)
                 gap(16.px)
                 maxWidth(800.px)
-                margin(0.px, Auto.auto)
+                margin(0.px, 0.px, 0.px, 0.px)
                 width(100.percent)
             }
         }
@@ -87,7 +85,7 @@ fun MessageListScreen(
                     ) {
                         messages.sortedByDescending { it.timestamp }.forEach { message ->
                             val isCurrentUser = message.senderId == currentUser?.id
-                            MessageBubble(message, isCurrentUser, dateFormat)
+                            MessageBubble(message, isCurrentUser)
 
                             // Mark message as read if it's received and unread
                             if (!message.isRead && message.receiverId == currentUser?.id) {
@@ -106,9 +104,12 @@ fun MessageListScreen(
 @Composable
 private fun MessageBubble(
     message: com.invesproject.shared.domain.model.Message,
-    isCurrentUser: Boolean,
-    dateFormat: SimpleDateFormat
+    isCurrentUser: Boolean
 ) {
+    val date = Instant.fromEpochMilliseconds(message.timestamp)
+        .toLocalDateTime(TimeZone.currentSystemDefault())
+    val formattedDate = "${date.month.name.take(3)} ${date.dayOfMonth}, ${date.hour}:${date.minute.toString().padStart(2, '0')}"
+
     Div(
         attrs = {
             style {
@@ -127,7 +128,7 @@ private fun MessageBubble(
                     padding(12.px, 16.px)
                     borderRadius(8.px)
                     maxWidth(70.percent)
-                    boxShadow("0 1px 2px rgba(0,0,0,0.1)")
+                    property("box-shadow", "0 1px 2px rgba(0,0,0,0.1)")
                     property("word-break", "break-word")
                 }
             }
@@ -150,7 +151,7 @@ private fun MessageBubble(
                     }
                 }
             ) {
-                Text(dateFormat.format(Date(message.timestamp)))
+                Text(formattedDate)
             }
         }
     }

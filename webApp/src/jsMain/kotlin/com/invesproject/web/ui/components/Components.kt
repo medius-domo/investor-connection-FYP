@@ -19,15 +19,12 @@ fun PrimaryButton(
             style {
                 backgroundColor(WebColors.Primary)
                 color(WebColors.OnPrimary)
-                border {
-                    width = 0.px
-                }
+                border(0.px)
                 borderRadius(4.px)
                 padding(12.px, 24.px)
                 cursor("pointer")
                 fontSize(14.px)
-                fontWeight(500)
-                property("transition", "background-color 0.2s")
+                fontWeight("500")
                 modifier()
             }
         }
@@ -41,10 +38,9 @@ fun OutlinedInput(
     value: String,
     onValueChange: (String) -> Unit,
     label: String,
-    type: InputType<String> = InputType.Text,
+    type: String = "text",
     isError: Boolean = false,
-    errorMessage: String? = null,
-    modifier: StyleScope.() -> Unit = {}
+    errorMessage: String? = null
 ) {
     Div(
         attrs = {
@@ -52,7 +48,6 @@ fun OutlinedInput(
                 display(DisplayStyle.Flex)
                 flexDirection(FlexDirection.Column)
                 gap(4.px)
-                modifier()
             }
         }
     ) {
@@ -66,25 +61,23 @@ fun OutlinedInput(
         ) {
             Text(label)
         }
-        Input(type = type) {
-            value(value)
-            onInput { event -> onValueChange(event.value) }
-            style {
-                backgroundColor(WebColors.Surface)
-                color(WebColors.OnSurface)
-                border {
-                    width = 1.px
-                    style = LineStyle.Solid
-                    color = if (isError) WebColors.Error else WebColors.OnSurface
+        Input(
+            attrs = {
+                type(type)
+                value(value)
+                onInput { event -> onValueChange(event.value) }
+                style {
+                    width(100.percent)
+                    padding(12.px)
+                    borderRadius(4.px)
+                    border(1.px, LineStyle.Solid, if (isError) WebColors.Error else WebColors.OnSurface)
+                    fontSize(14.px)
+                    outline("none")
+                    property("&:focus", "border-color: ${WebColors.Primary}")
                 }
-                borderRadius(4.px)
-                padding(12.px)
-                fontSize(14.px)
-                width(100.percent)
-                property("box-sizing", "border-box")
             }
-        }
-        if (isError && errorMessage != null) {
+        )
+        if (errorMessage != null) {
             Span(
                 attrs = {
                     style {
@@ -107,23 +100,19 @@ fun LoadingSpinner() {
                 display(DisplayStyle.Flex)
                 justifyContent(JustifyContent.Center)
                 alignItems(AlignItems.Center)
-                padding(16.px)
+                padding(24.px)
             }
         }
     ) {
         Div(
             attrs = {
                 style {
-                    width(40.px)
-                    height(40.px)
-                    border {
-                        width = 4.px
-                        style = LineStyle.Solid
-                        color = WebColors.Primary
-                    }
+                    width(24.px)
+                    height(24.px)
+                    border(2.px, LineStyle.Solid, WebColors.Primary)
+                    property("border-top-color", "transparent")
                     borderRadius(50.percent)
                     property("animation", "spin 1s linear infinite")
-                    property("border-top-color", "transparent")
                 }
             }
         )
@@ -148,11 +137,19 @@ fun ErrorMessage(
                 flexDirection(FlexDirection.Column)
                 alignItems(AlignItems.Center)
                 gap(16.px)
-                padding(16.px)
+                padding(24.px)
             }
         }
     ) {
-        Text(message)
+        Text(
+            attrs = {
+                style {
+                    color(WebColors.Error)
+                }
+            }
+        ) {
+            Text(message)
+        }
         PrimaryButton(
             text = "Retry",
             onClick = onRetry
@@ -171,7 +168,7 @@ fun Card(
                 backgroundColor(WebColors.Surface)
                 borderRadius(8.px)
                 padding(16.px)
-                property("box-shadow", "0 2px 4px rgba(0,0,0,0.1)")
+                property("box-shadow", "0 2px 4px rgba(0, 0, 0, 0.1)")
                 modifier()
             }
         }

@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.media3.exoplayer.offline.Download
 import com.invesproject.android.data.AndroidProposalViewModel
 import com.invesproject.shared.domain.model.BusinessProposal
 import com.invesproject.shared.domain.model.BusinessSector

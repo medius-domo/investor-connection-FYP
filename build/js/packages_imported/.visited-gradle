@@ -1,0 +1,133 @@
+{
+  "version": "9",
+  "items": {
+    "f3f2c2382d71985d6b795d160137f399": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\1.9.20\\6adfe1f1e3c99a19c123d96d713fb532786fdc62\\kotlin-stdlib-js-1.9.20.klib"
+    },
+    "0d5a67a5998ac8549b65b9af7b8bb281": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.runtime\\runtime-js\\1.5.10\\c0717d615e7a7785fa96fbad1918a35b297650fe\\runtime-js-1.5.10.klib"
+    },
+    "67c827c197d695ce9ac33c6fbf6b2966": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-core-js\\1.7.3\\6b2e7c874877434e53fbf736eaa05d6dda02d642\\kotlinx-coroutines-core-jsir-1.7.3.klib"
+    },
+    "f53756ee88cef419b2e73033923a2e9c": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\atomicfu-js\\0.21.0\\c9f79cd6efe7bfd96e7df26758d7bee371235627\\atomicfu-jsir-0.21.0.klib"
+    },
+    "c31d4b86f871ee648d47c66548fbfa57": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.9.0\\cd65c21cfd1eec4d44ef09f9f52b6d9f8a720636\\kotlin-stdlib-common-1.9.0.jar"
+    },
+    "15b3b054ab4a6eda4a8c899277426209": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlinx-atomicfu-runtime\\1.8.20\\8ccfa77dc6cd3ff5ffaad24ea15747327d4492ea\\kotlinx-atomicfu-runtime-1.8.20.klib"
+    },
+    "205ca429348f52bb67b17fac89dc861a": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.foundation\\foundation-js\\1.5.10\\bb6e137c66443708d1b3b2657a431e060c74876e\\foundation-js-1.5.10.klib"
+    },
+    "5971bb7d51c5b3530311bc6d7d973d34": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.animation\\animation-js\\1.5.10\\febcb50635f5b8b866dc765d5378fc37d7bc9e80\\animation-js-1.5.10.klib"
+    },
+    "86ada21d7cf5c56dba9cb27fcd1ffb4d": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.foundation\\foundation-layout-js\\1.5.10\\296877edd84a6a32aa8494caf6557534fcd69e10\\foundation-layout-js-1.5.10.klib"
+    },
+    "a06f1da1a6bae5e0b0f18a51c2b8fead": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-js\\1.5.10\\9df1004fb23d43803fe7db403837f4238633bf5f\\ui-js-1.5.10.klib"
+    },
+    "43b64697f46b9d7aa9630beec6c74ec6": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-text-js\\1.5.10\\b83773fcc3ff8b21f48a145210e185a3a4c37126\\ui-text-js-1.5.10.klib"
+    },
+    "00dacb9db18260be9116a1f740ad0aea": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-graphics-js\\1.5.10\\e250e4a76cd14aabf6c1ef8d49567aef0dc1aec0\\ui-graphics-js-1.5.10.klib"
+    },
+    "9aacea266dbab5ba0ac9ff57beec7a94": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.skiko\\skiko-js\\0.7.85\\6931054ce39cfbfb194c025d09a65742ba0ee7db\\skiko-js-0.7.85.klib",
+      "target": "skiko-js\\0.7.85"
+    },
+    "df318257c5be80f7ab5c67624cc07cba": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-unit-js\\1.5.10\\209aec5683dcfd851782bd59567ccb8971ff93e3\\ui-unit-js-1.5.10.klib"
+    },
+    "864d27635e73bd191a3192cb5823ef6b": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-geometry-js\\1.5.10\\47ced8f855426dbef1d954274caa3ba51bfddebe\\ui-geometry-js-1.5.10.klib"
+    },
+    "4daab691d2b3288d425e3d4ce3640ca2": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.ui\\ui-util-js\\1.5.10\\df262923fc1158a3f2c8fd6c6cc37d78d910a1c0\\ui-util-js-1.5.10.klib"
+    },
+    "3cb971e7bd5ae9a9dbe2253af902b673": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.runtime\\runtime-saveable-js\\1.5.10\\1a528e1a41837c89b41d2cb1bf8d0be3082258b9\\runtime-saveable-js-1.5.10.klib"
+    },
+    "23ee0c2785003ba7948fac9d2d034c21": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.animation\\animation-core-js\\1.5.10\\307cb47c7e333f3368f57b53284fd9f140f0137\\animation-core-js-1.5.10.klib"
+    },
+    "0d29688b72341ebf26ef0565bf2f9fb5": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.material3\\material3-js\\1.5.10\\46760e0e5bc0e40e19e2fdfdcea7af55726b4b72\\material3-js-1.5.10.klib"
+    },
+    "3f93bbb46d2b1ca4d80d0c36890a1ee1": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-datetime-js\\0.4.1\\5cc67829eed05f1872e70f97ca5b9ecde032f785\\kotlinx-datetime-jsir-0.4.1.klib",
+      "target": "Kotlin-DateTime-library-kotlinx-datetime-js-ir\\0.4.1"
+    },
+    "d356df8ed21c63fbacf8d7ef87b6eaa0": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-core-js\\1.6.0\\bb589ecd997c9b459f15b06ff4639bc6cabf522d\\kotlinx-serialization-core-js-1.6.0.klib"
+    },
+    "b50857453dcb30a49d765d6aca822dfe": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-dom-api-compat\\1.9.20\\3c0ac04445c1aeec4366d69e1791cd6ad31ddc07\\kotlin-dom-api-compat-1.9.20.klib"
+    },
+    "68f9ce8f1564eaad330d78d3a4907eff": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.material\\material-ripple-js\\1.5.10\\53fe4cb5f60a48930ce7171d94b2dd0cfb4749e8\\material-ripple-js-1.5.10.klib"
+    },
+    "8c8b3030cdcb969028ef532ee7c6aa37": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.material\\material-icons-core-js\\1.5.10\\1ddd19f9595a411601557f38b431a41fd81183ec\\material-icons-core-js-1.5.10.klib"
+    },
+    "0ffdceb4847380e2dcfbd909170a9a1d": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-json-js\\1.6.0\\8da0ad64ba616b5274fc5cdc07656912e1eea71d\\kotlinx-serialization-json-js-1.6.0.klib"
+    },
+    "e01ad5cacf9ff45e38dcf65e907c9452": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\dev.gitlive\\firebase-auth-js\\1.8.1\\9bf6d9e944357350ea3f83e3689a271ef5230e04\\firebase-auth-jsir-1.8.1.klib"
+    },
+    "45e892746f333db70e9890ec7840c06a": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\dev.gitlive\\firebase-app-js\\1.8.1\\e247c5bf9250576261bfe3487eabd0ecdbd70aa8\\firebase-app-jsir-1.8.1.klib"
+    },
+    "91adc4b7cb0051458e53777e5549a24d": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\dev.gitlive\\firebase-common-js\\1.8.1\\d1204211ef778c7c649afc8e8f676c1c97245fc8\\firebase-common-jsir-1.8.1.klib",
+      "target": "firebase-kotlin-sdk-firebase-common-js-ir\\1.8.1"
+    },
+    "812674c04a7d48234fc55c512c6de788": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\dev.gitlive\\firebase-firestore-js\\1.8.1\\bbeff18b3f6d3da2f9b305ab6ef5eb264880d4cb\\firebase-firestore-jsir-1.8.1.klib"
+    },
+    "97ccb8a17f206a99b0e822a1c5c97058": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.html\\html-core-js\\1.5.10\\ea514fb28b920413dacd3744333c6bf00db101b6\\html-core-js-1.5.10.klib",
+      "target": "html-core-js\\1.5.10"
+    },
+    "627a87325e006024cc4b82d96a1fc30e": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.html\\internal-html-core-runtime-js\\1.5.10\\7dd7872fa194cd87edc708a4e0523cfb687ab1e6\\internal-html-core-runtime-js-1.5.10.klib"
+    },
+    "a66860f155cb10a237acb5f7d0f6d0e3": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-test-js-runner\\1.9.20\\e9b1fc55af69eb09d63b271d17c217d9483241cc\\kotlin-test-js-runner-1.9.20.jar",
+      "target": "kotlin-test-js-runner\\0.0.1"
+    },
+    "cb7d13c12a97693448b82c9574c2fd3e": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-js\\1.9.22\\95e0c81ba7ee3d36c7d7312a63f1b0bae454b3fe\\kotlin-stdlib-js-1.9.22.klib"
+    },
+    "ebe3bb84bcca327591223654e61a6281": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib-common\\1.8.21\\d749cd5ae25da36d06e5028785038e24f9d37976\\kotlin-stdlib-common-1.8.21.jar"
+    },
+    "9232b38a4862316670002231ebc404ea": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.compose.html\\html-svg-js\\1.5.10\\826778f0b0be74e090aadf8844a942c2bda46bfe\\html-svg-js-1.5.10.klib"
+    },
+    "548040370fb47e80ed1284c1a63a9baf": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-serialization-core-js\\1.5.1\\6f4937e631bfa41fd1de1b34ddae08a38715a502\\kotlinx-serialization-core-jsir-1.5.1.klib"
+    },
+    "5b333b7684a21b3c92aefdf890a77d07": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-js-js\\1.0.0-pre.682\\eb5a32f002c058b55cf342ce2eecf703e9d0141c\\kotlin-js-js-1.0.0-pre.682.klib"
+    },
+    "15b354a66801b55f146e3be1466a09be": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\io.github.turansky.seskar\\seskar-react-js\\2.22.0\\a56439ce48d94b559b21535fbeaae87043c824ce\\seskar-react-js-2.22.0.klib"
+    },
+    "c89cb0d4715e928335a6507eae5d3dea": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\io.github.turansky.seskar\\seskar-core-js\\2.22.0\\e3ef9aceae4e47d9db1a412014025a527c16d16f\\seskar-core-js-2.22.0.klib"
+    },
+    "a30572bd68cb1cadaea194124920efcd": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-extensions-js\\1.0.1-pre.682\\dbf3cb2b9fa97b5c545d996808096ef9842e033\\kotlin-extensions-js-1.0.1-pre.682.klib"
+    },
+    "d52729d538d085b3c7802c0095cabd8c": {
+      "src": "C:\\Users\\USER\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin-wrappers\\kotlin-css-js\\1.0.0-pre.682\\fcee9f4eae82bbdbfd1aca1610c4f384fa74e06\\kotlin-css-js-1.0.0-pre.682.klib"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+com.invesproject.android.test.androidApp-androidTest-0 I:\INVESPROJECT\androidApp\build\generated\res\resValues\androidTest\debug
+com.invesproject.android.test.androidApp-mergeDebugAndroidTestResources-1 I:\INVESPROJECT\androidApp\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.invesproject.android.test.androidApp-mergeDebugAndroidTestResources-2 I:\INVESPROJECT\androidApp\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.invesproject.android.test.androidApp-merged_res-3 I:\INVESPROJECT\androidApp\build\intermediates\merged_res\debugAndroidTest

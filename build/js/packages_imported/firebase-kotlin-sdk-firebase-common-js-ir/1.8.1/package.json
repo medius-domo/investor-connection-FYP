@@ -1,0 +1,13 @@
+{
+  "name": "firebase-kotlin-sdk-firebase-common-js-ir",
+  "version": "1.8.1",
+  "main": "firebase-kotlin-sdk-firebase-common-js-ir.js",
+  "types": "firebase-kotlin-sdk-firebase-common-js-ir.d.ts",
+  "devDependencies": {},
+  "dependencies": {
+    "firebase": "9.4.1"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

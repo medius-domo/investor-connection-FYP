@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.invesproject.android"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.invesproject.android"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
     }
@@ -70,6 +70,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.media3:media3-exoplayer:1.7.1")
     debugImplementation("androidx.compose.ui:ui-tooling")
     
     // Android specific dependencies
@@ -90,7 +91,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.5.0")
 }
 
-configurations.all {
+ configurations.all {
     resolutionStrategy {
         force("org.jetbrains.kotlin:kotlin-stdlib:1.9.20")
         force("org.jetbrains.kotlin:kotlin-stdlib-common:1.9.20")

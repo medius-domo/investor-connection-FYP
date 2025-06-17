@@ -1,0 +1,10 @@
+abi_version=1.8.0
+builtins_platform=JS
+compiler_version=1.9.20
+depends=org.jetbrains.kotlinx\:kotlinx-serialization-json org.jetbrains.compose.material3\:material3 org.jetbrains.kotlinx\:kotlinx-datetime dev.gitlive\:firebase-auth dev.gitlive\:firebase-firestore dev.gitlive\:firebase-app dev.gitlive\:firebase-common org.jetbrains.kotlinx\:kotlinx-serialization-core org.jetbrains.kotlin\:kotlin-dom-api-compat org.jetbrains.compose.material\:material-ripple org.jetbrains.compose.foundation\:foundation org.jetbrains.compose.animation\:animation org.jetbrains.compose.foundation\:foundation-layout org.jetbrains.compose.animation\:animation-core org.jetbrains.compose.material\:material-icons-core org.jetbrains.compose.ui\:ui org.jetbrains.compose.ui\:ui-text org.jetbrains.compose.ui\:ui-graphics org.jetbrains.skiko\:skiko org.jetbrains.compose.html\:html-core org.jetbrains.compose.runtime\:runtime-saveable org.jetbrains.compose.ui\:ui-unit org.jetbrains.compose.ui\:ui-geometry org.jetbrains.compose.html\:internal-html-core-runtime org.jetbrains.compose.runtime\:runtime org.jetbrains.kotlinx\:kotlinx-coroutines-core org.jetbrains.kotlinx\:atomicfu org.jetbrains.compose.ui\:ui-util kotlin org.jetbrains.kotlin\:kotlinx-atomicfu-runtime
+ir_signature_versions=1,2
+jsOutputName=InvesProject-shared
+metadata_version=1.4.1
+serializedIrFileFingerprints=d8oa44u9o15j.3o99dcxooy9go 33w3dqs0gz3xa.390olc6po5m2q tp2ofi7hfs9v.2uj3gtc81kg83 2n63t4bnem7z7.8hgvsrdwvqbf 54586qgr17mc.2lmnj3mzso5mn 1xbjq7379n3wm.3j3uqqn8401l3 185uvaydaedpp.3s39vi6yt0psx 2au179osbw3p6.2n8uem075lvq7 16ps9xj85i2su.14cb2za4ncuk8 1y5g3d6y8nmaw.10xqgk82u3et2 31ai7erdz4im8.331p8j7qfmopy 3hb9dedp2zgwf.k2vqdruzzdym 29e35dmkht8t7.2qs5inpys89nm 24e7m8n200vfz.11ibdq4mh9zd1
+serializedKlibFingerprint=393144wg3e8jg.1lbljxy9wt677
+unique_name=InvesProject\:shared

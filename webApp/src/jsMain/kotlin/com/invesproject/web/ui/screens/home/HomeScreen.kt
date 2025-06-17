@@ -1,6 +1,7 @@
 package com.invesproject.web.ui.screens.home
 
 import androidx.compose.runtime.*
+import com.invesproject.shared.domain.model.User
 import com.invesproject.shared.domain.model.UserRole
 import com.invesproject.shared.presentation.viewmodel.AuthViewModel
 import com.invesproject.shared.presentation.viewmodel.MessageViewModel
@@ -19,13 +20,6 @@ fun HomeScreen(
     onNavigateToLogin: () -> Unit
 ) {
     val currentUser by authViewModel.currentUser.collectAsState()
-    var selectedTab by remember { mutableStateOf(0) }
-
-    LaunchedEffect(currentUser) {
-        if (currentUser == null) {
-            onNavigateToLogin()
-        }
-    }
 
     Div(
         attrs = {
@@ -37,105 +31,114 @@ fun HomeScreen(
         }
     ) {
         // Header
-        Header(
+        Div(
             attrs = {
                 style {
                     display(DisplayStyle.Flex)
                     justifyContent(JustifyContent.SpaceBetween)
                     alignItems(AlignItems.Center)
                     padding(16.px)
-                    backgroundColor(WebColors.Surface)
-                    boxShadow("0 2px 4px rgba(0,0,0,0.1)")
-                    position(Position.Sticky)
-                    top(0.px)
-                    zIndex(1)
+                    backgroundColor(WebColors.Primary)
+                    color(WebColors.OnPrimary)
+                    property("box-shadow", "0 2px 4px rgba(0,0,0,0.1)")
+                    property("z-index", "1")
                 }
             }
         ) {
             H1(
                 attrs = {
-                    classes(WebTypography.TitleLarge)
+                    classes(WebTypography.HeadlineLarge)
                     style {
-                        color(WebColors.Primary)
                         margin(0.px)
                     }
                 }
             ) {
                 Text("InvesProject")
             }
-
-            Button(
-                attrs = {
-                    onClick { authViewModel.signOut() }
-                    style {
-                        backgroundColor(Color.transparent)
-                        color(WebColors.Primary)
-                        border(0.px)
-                        cursor("pointer")
-                        fontSize(14.px)
-                        padding(8.px)
+            if (currentUser != null) {
+                Button(
+                    attrs = {
+                        onClick { authViewModel.signOut() }
+                        style {
+                            backgroundColor(Color.transparent)
+                            color(WebColors.OnPrimary)
+                            border(0.px)
+                            cursor("pointer")
+                            padding(8.px, 16.px)
+                        }
                     }
+                ) {
+                    Text("Sign Out")
                 }
-            ) {
-                Text("Sign Out")
             }
         }
 
-        // Main content
-        Main(
-            attrs = {
-                style {
-                    flex(1)
-                    padding(16.px)
-                    maxWidth(1200.px)
-                    margin(0.px, Auto.auto)
-                    width(100.percent)
-                    boxSizing("border-box")
-                }
-            }
-        ) {
-            when (selectedTab) {
-                0 -> ProposalListScreen(
-                    currentUser = currentUser,
-                    proposalViewModel = proposalViewModel,
-                    messageViewModel = messageViewModel
-                )
-                1 -> MessageListScreen(
-                    currentUser = currentUser,
-                    messageViewModel = messageViewModel
-                )
-                2 -> if (currentUser?.role == UserRole.INNOVATOR) {
-                    NewProposalScreen(
-                        currentUser = currentUser,
-                        proposalViewModel = proposalViewModel
-                    )
-                }
-                3 -> ProfileScreen(
-                    currentUser = currentUser,
-                    authViewModel = authViewModel
-                )
-            }
-        }
-
-        // Navigation
-        Nav(
+        // Main Content
+        Div(
             attrs = {
                 style {
                     display(DisplayStyle.Flex)
-                    justifyContent(JustifyContent.Center)
-                    gap(8.px)
+                    flex(1)
                     padding(16.px)
-                    backgroundColor(WebColors.Surface)
-                    boxShadow("0 -2px 4px rgba(0,0,0,0.1)")
+                    maxWidth(1200.px)
+                    margin(0.px)
+                    width(100.percent)
                 }
             }
         ) {
-            NavButton("Home", 0, selectedTab) { selectedTab = 0 }
-            NavButton("Messages", 1, selectedTab) { selectedTab = 1 }
-            if (currentUser?.role == UserRole.INNOVATOR) {
-                NavButton("New Proposal", 2, selectedTab) { selectedTab = 2 }
+            when (val user = currentUser) {
+                null -> {
+                    Div(
+                        attrs = {
+                            style {
+                                display(DisplayStyle.Flex)
+                                justifyContent(JustifyContent.Center)
+                                alignItems(AlignItems.Center)
+                                width(100.percent)
+                            }
+                        }
+                    ) {
+                        Text("Please sign in to continue")
+                    }
+                }
+                else -> {
+                    when (user.role) {
+                        UserRole.INNOVATOR -> {
+                            Div(
+                                attrs = {
+                                    style {
+                                        display(DisplayStyle.Flex)
+                                        flexDirection(FlexDirection.Column)
+                                        gap(24.px)
+                                        width(100.percent)
+                                    }
+                                }
+                            ) {
+                                NewProposalScreen(
+                                    currentUser = user,
+                                    proposalViewModel = proposalViewModel
+                                )
+                                ProposalListScreen(
+                                    currentUser = user,
+                                    proposalViewModel = proposalViewModel,
+                                    messageViewModel = messageViewModel
+                                )
+                            }
+                        }
+                        UserRole.INVESTOR -> {
+                            ProposalListScreen(
+                                currentUser = user,
+                                proposalViewModel = proposalViewModel,
+                                messageViewModel = messageViewModel
+                            )
+                        }
+                    }
+                    MessageListScreen(
+                        currentUser = user,
+                        messageViewModel = messageViewModel
+                    )
+                }
             }
-            NavButton("Profile", 3, selectedTab) { selectedTab = 3 }
         }
     }
 }

@@ -82,10 +82,10 @@ object InvesProjectTheme : StyleSheet() {
             fontSize(14.px)
             fontWeight(500)
             property("transition", "background-color 0.2s")
+        }
 
-            hover(self) style {
-                backgroundColor(WebColors.PrimaryContainer)
-            }
+        "button:hover" style {
+            backgroundColor(WebColors.PrimaryContainer)
         }
 
         "input" style {
@@ -101,13 +101,13 @@ object InvesProjectTheme : StyleSheet() {
             fontSize(14.px)
             width(100.percent)
             property("box-sizing", "border-box")
+        }
 
-            focus(self) style {
-                border {
-                    color = WebColors.Primary
-                }
-                outline("none")
+        "input:focus" style {
+            border {
+                color = WebColors.Primary
             }
+            outline("none")
         }
 
         "textarea" style {
@@ -123,15 +123,15 @@ object InvesProjectTheme : StyleSheet() {
             fontSize(14.px)
             width(100.percent)
             property("box-sizing", "border-box")
-            resize("vertical")
+            property("resize", "vertical")
             minHeight(100.px)
+        }
 
-            focus(self) style {
-                border {
-                    color = WebColors.Primary
-                }
-                outline("none")
+        "textarea:focus" style {
+            border {
+                color = WebColors.Primary
             }
+            outline("none")
         }
     }
 } 

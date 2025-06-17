@@ -1,0 +1,12 @@
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\auth\LoginScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\auth\SignUpScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\home\ProposalListScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\theme\Theme.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\firebase\FirebaseConfig.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\home\NewProposalScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\App.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\home\HomeScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\components\Components.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\Main.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\home\ProfileScreen.kt
+I:\INVESPROJECT\webApp\src\jsMain\kotlin\com\invesproject\web\ui\screens\home\MessageListScreen.kt

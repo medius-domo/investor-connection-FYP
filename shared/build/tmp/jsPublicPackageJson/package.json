@@ -1,0 +1,15 @@
+{
+  "name": "InvesProject-shared",
+  "version": "0.0.0-unspecified",
+  "main": "InvesProject-shared.js",
+  "types": "InvesProject-shared.d.ts",
+  "devDependencies": {},
+  "dependencies": {
+    "@js-joda/core": "3.2.0",
+    "firebase": "9.4.1",
+    "format-util": "^1.0.5"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}
